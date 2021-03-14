@@ -8,8 +8,7 @@ It requires that an environment variable called GA_TRACKING_ID will be set to th
 When calling the `track_event`  function, the only mandatory fields are `category` and `action`. 
 They describe the nature of the tracked event. For example, `category` could be set to *Room* and `action` could be set to *Closed*.
 
-The optional metrics parameter needs to be a dictionary containing key value pairs of the following form: `"cm{integer}" : {integer}` where the key is the index of the relevant metric and the value is the metrics int value. See metric reference 
-[here]: https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cm_
+The optional metrics parameter needs to be a dictionary containing key value pairs of the following form: `"cm{integer}" : {integer}` where the key is the index of the relevant metric and the value is the metrics int value. See metric reference [here](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cm_)
 
 To find which metrics are available and their index go to Admin -> Desired property(UA) -> Custom Definitions -> Custom Metrics
 
@@ -18,9 +17,9 @@ The other optional parameters are self explanatory, `value` is an integer value 
 Example usage:
 
 ```
-import analytics
+from UniversalAnalyticsTracking import tracking 
 
-analytics.track_event(
+tracking.track_event(
     category='Room', 
     action='Closed', 
     label='Sports',
